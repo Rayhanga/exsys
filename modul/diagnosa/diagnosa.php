@@ -55,7 +55,7 @@ switch ($_GET['act']) {
                 $cflama = $cflama + ($cf * (1 - $cflama));
               }
               if ($cf * $cflama < 0) {
-                $cflama = ($cflama + $cf) / (1 - Math . Min(Math . abs($cflama), Math . abs($cf)));
+                $cflama = ($cflama + $cf) / (1 - min(abs($cflama), abs($cf)));
               }
               if (($cf < 0) && ($cf * $cflama >= 0)) {
                 $cflama = $cflama + ($cf * (1 + $cflama));
