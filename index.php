@@ -69,44 +69,6 @@ include "config/fungsi_alert.php";
 
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <?php
-                if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
-                    ?>
-                  <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="gambar/admin/admin.png" class="user-image" alt="User Image"> <?php echo ucfirst($_SESSION['username']); ?>
-                      <span class="hidden-xs"><?php echo $user; ?></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <!-- User image -->
-                      <li class="user-header">
-                        <img src="gambar/admin/admin.png" class="img-circle" alt="User Image">
-                        <p>
-                         Login sebagai <?php echo ucfirst($_SESSION['username']); ?>
-                          <small>Pakar dari Chirexs 1.0</small>
-                        </p>
-                      </li>
-                      <!-- Menu Body -->
-                      <li class="user-body">
-						<a <?php if ($module == "bantuan") echo 'class="active"'; ?> href="bantuan"><i class="fa fa-question-circle"></i> <span>Bantuan</span></a>
-                        <!-- /.row -->
-                      </li>
-                      <!-- Menu Footer-->
-                      <li class="user-footer"> 
-                        <div class="pull-left">
-                          <a class="btn btn-default btn-flat" <?php if ($module == "tentang") echo 'class="class="btn btn-default btn-flat active"'; ?> href="?module=tentang"><i class="fa fa-info-circle"></i> <span>Tentang</span></a>
-                        </div>
-                        <div class="pull-right">
-                          <a class="btn btn-default btn-flat" href="JavaScript: confirmIt('Anda yakin akan logout dari aplikasi ?','logout.php','','','','u','n','Self','Self')" onMouseOver="self.status = ''; return true" onMouseOut="self.status = ''; return true"><i class="fa fa-sign-out"></i> <span>LogOut</span></a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-              <?php } else { ?> <li><a <?php if ($module == "bantuan") echo 'class="active"'; ?> id="bantu" href="bantuan" data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"300", "hide":"500"}' title="Silahkan klik link berikut, jika anda masih kurang paham tentang penggunaan aplikasi ini !"><i class="fa fa-question-circle"></i> <span>Bantuan</span></a></li>
-				  <li class="dropdown messages-menu">
-                    <a <?php if ($module == "formlogin") echo 'class="active"'; ?> href="formlogin"><i class="fa fa-sign-in"></i> <span>Login</span></a>
-                  </li>
-              <?php } ?>
             </ul>
           </div>
         </nav>
