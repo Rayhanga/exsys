@@ -133,14 +133,19 @@ switch ($_GET['act']) {
       echo $ardpkt[$idpkt[1]];
       echo "</h4></div></div>
           <div class='box box-warning box-solid'><div class='box-header with-border'><h3 class='box-title'>Saran</h3></div><div class='box-body'><h4>";
-      echo $arspkt[$idpkt[1]];
-      echo "</h4></div></div>
-          <div class='box box-danger box-solid'><div class='box-header with-border'><h3 class='box-title'>Kemungkinan lain:</h3></div><div class='box-body'><h4>";
-      for ($ipl = 2; $ipl < count($idpkt); $ipl++) {
-        echo " <h4><i class='fa fa-caret-square-o-right'></i> " . $nmpkt[$ipl] . "</b> / " . round($vlpkt[$ipl], 2) . " % (" . $vlpkt[$ipl] . ")<br></h4>";
+      foreach ($argejala as $key => $value) {
+        $kondisi = $value;
+        $ig++;
+        $gejala = $key;
+        $sql4 = mysqli_query($conn, "SELECT * FROM gejala where kode_gejala = '$key'");
+        $r4 = mysqli_fetch_array($sql4);
+        echo "<div><h4>Jika Anda mengalami <span class='gejala-penting'>";
+        echo $r4[nama_gejala];
+        echo "</span></h4><p>";
+        echo $r4[solusi_gejala];
+        echo "</p></div>";
       }
-      echo "</div></div>
-		  </div>";
+      echo "</h4></div></div>";
     } else {
       echo "
 	 <h2 class='text text-primary'>Diagnosa Penyakit</h2>  <hr>

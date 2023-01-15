@@ -152,3 +152,7 @@ img.post{
 .well {
   overflow: hidden;
 }
+
+.gejala-penting {
+    font-weight: bold;
+}
