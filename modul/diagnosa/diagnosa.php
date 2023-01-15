@@ -148,11 +148,11 @@ switch ($_GET['act']) {
       echo "</h4></div></div>";
     } else {
       echo "
-	 <h2 class='text text-primary'>Diagnosa Penyakit</h2>  <hr>
+	 <h2 class='text text-primary'>Diagnosa Depresi</h2>  <hr>
 	 <div class='alert alert-success alert-dismissible'>
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
                 <h4><i class='icon fa fa-exclamation-triangle'></i>Perhatian !</h4>
-                Silahkan memilih gejala sesuai dengan kondisi yang andarasakan saat ini. Jika sudah, tekan tombol Submit di bawah untuk melihat hasil diagnosis.
+                Silahkan memilih gejala sesuai dengan kondisi yang anda rasakan saat ini. Jika sudah, tekan tombol Submit di bawah untuk melihat hasil diagnosis.
               </div>
 		<form name=text_form method=POST action='diagnosa' >
            <table class='table table-bordered table-striped konsultasi'><tbody class='pilihkondisi'>
