@@ -49,7 +49,7 @@ include "config/fungsi_alert.php";
     <!-- AdminLTE App -->
     <script src="aset/app.js"></script>
   </head>
-  <body id="pakarayam" class="hold-transition skin-purple-light sidebar-mini">
+  <body id="pakardep" class="hold-transition skin-purple sidebar-mini">
     <div class="wrapper">
       <!-- Main Header -->
       <header class="main-header">
