@@ -49,7 +49,6 @@ switch ($_GET['act']) {
             $arkondisi = explode("_", $_POST['kondisi'][$i]);
             $gejala = $arkondisi[0];
             if ($rgejala['kode_gejala'] == $gejala) {
-              // $cf = ($rgejala['mb'] - $rgejala['md']) * $arbobot[$arkondisi[1]];
               $cf = ($rgejala['md']) * $arbobot[$arkondisi[1]];
               if (($cf >= 0) && ($cf * $cflama >= 0)) {
                 $cflama = $cflama + ($cf * (1 - $cflama));
@@ -192,8 +191,12 @@ switch ($_GET['act']) {
       }
       
       echo "
-      	  <input class='float' type=submit data-toggle='tooltip' data-placement='top' title='Klik disini untuk melihat hasil diagnosa' name=submit style='font-family:Arial, FontAwesome'>
-          </tbody></table></form> ";
+      	  
+          </tbody></table>
+          <div style='display:flex; justify-content:flex-end;'>
+          <input class='float' type=submit data-toggle='tooltip' data-placement='top' title='Klik disini untuk melihat hasil diagnosa' name=submit style='font-family:Arial, FontAwesome'>
+          </div>
+          </form> ";
           
     }
     break;
